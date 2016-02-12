@@ -1,3 +1,5 @@
+int g = 300;
+
 //drawling order
 
 void setup(){ //runs once at startup
@@ -11,18 +13,18 @@ void draw(){ //runs over and over
     fill(0); //color within the next shape 
     rectMode(CORNER); //drawling rect from center
     noStroke(); //no outline no outline
-    rect(20,20,560,330); //rect(x1,1y,x2,2y);
+    rect(20,20,560,g); //rect(x1,1y,x2,2y);
     
     //red quad
     stroke(255,0,0); //red outline color
     noFill(); //no color fill in shape
     strokeWeight(1); //outline thickness
-    quad(300,150,100,350,300,550,500,350);
+    quad(g,150,100,350,g,550,500,350);
     
     //top circle //fill circle
     fill(255); //white
     noStroke(); //no outline
-    ellipse(300,150,80,80); our first circle
+    ellipse(g,150,80,80); //our first circle
     
     //left circle 
     fill(0,255,0,150); //
@@ -44,7 +46,7 @@ void draw(){ //runs over and over
      fill(255); //fill white
      stroke(0,0,255); //stroke color
      rectMode(CENTER); //drawling rect from center
-     rect(300,600,10,10); line
+     rect(300,600,10,10); //line
      
      //line between two points
      stroke(238,23,250); //stroke color
@@ -54,11 +56,11 @@ void draw(){ //runs over and over
      //arc
      stroke(0); //stroke color 
      noFill(); //no color
-     strokeWeight(1); line larger
+     strokeWeight(1); //line larger
      arc(500,550,400,400, PI, PI+HALF_PI);
      
      //point
-     stroke(255,0,0); stroke color
-     strokeWeight(3); line larger
-     point(500,550); point placement
+     stroke(255,0,0); //stroke color
+     strokeWeight(3); //line larger
+     point(500,550); //point placement
 }
