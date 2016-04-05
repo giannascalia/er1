@@ -1,34 +1,19 @@
-class Drop{
-  float x,y;
-  float speed;
-  float r;
+class Timer {
+  int savedTime
+  int totalTime; //timer duation 
   
-  Drop(){
-    r = 8;
-    x = random(width);
-    y = -r*4;
-    speed = random(1,5);
-    c = color(50, 100, 150);
+  timer(int tempTotalTime){
+    totalTime = tempTotalTime;
   }
-  
-  void move() {
-    y += speed;
+  void start();
+  savedTime = millis();
+}
+boolean isFinished(){
+  int passedTime = millis()- savedTime;
+  if (passedTime > totalTime) {
+    return true;
+  } else {
+    return false;
   }
-  
-  boolean reachedBottom() {
-    if (y > height + r*4) {
-      return true;
-    } else {
-      return false;
-    }
-  }
-  void display(){
-    fill(c);
-    noStroke();
-    ellipse(x, y, r*2, r*2);
-  }
-  void caught(){
-    speed = 0;
-    y= -1000;
-  }
+ }
 }
