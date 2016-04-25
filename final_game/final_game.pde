@@ -32,3 +32,18 @@ void draw() {
     }
   }
 }
+if(levelCounter >=drops.length){
+  level++;
+  levelCounter=0;
+  lives=10;
+  totaldrops=0;
+  timer.seTime(constrian(300-level*25,0,300));
+}
+textFont(f,14);
+fill(0);
+text("lives left:"+ lives, 10,20);
+rect(10,24,lives*10,10);
+
+text("Level;" + level, 300,20);
+text("Score:" + score, 300,20);
+}
